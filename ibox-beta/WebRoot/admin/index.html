@@ -1,0 +1,114 @@
+<#include "/admin/layout.html"> 
+<@layout>
+	<link href="${ctx!}/admin/css/plugins/jQueryUI/jquery-ui-1.10.4.custom.min.css" rel="stylesheet">
+    <!-- Data Tables -->
+    <link href="${ctx!}/admin/css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="${ctx!}/admin/css/style.css" rel="stylesheet">
+             <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-content">
+                                <div>
+                                	
+                                    <span class="pull-right text-right">
+                                        <small>最近一星期上传统计 </small>
+                                            <br/>
+                                         <input type="hidden" id="records" value="${records}"> 
+                                            共：${sevenSum}
+                                        </span>
+                                  
+                                </div>
+
+                                <div class="flot-chart" style="height: 140px">
+                                    <div class="flot-chart-content" id="flot-chart3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+
+                    <div class="col-lg-4">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <span class="label label-primary pull-right">今天</span>
+                                <h5>视频</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <h1 class="no-margins">${videoCount}</h1>
+                           
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <span class="label label-info pull-right">今天</span>
+                                <h5>图片</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <h1 class="no-margins">${picCount}</h1>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <span class="label label-warning pull-right">今天</span>
+                                <h5>音乐</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <h1 class="no-margins">${musicCount}</h1>
+                               
+                            </div>
+                        </div>
+                        
+                        </div>
+                    
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>集群概况</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="index_3.html#">
+                                        <i class="fa fa-wrench"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-user">
+                                        <li><a href="index_3.html#">选项1</a>
+                                        </li>
+                                        <li><a href="index_3.html#">选项2</a>
+                                        </li>
+                                    </ul>
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content ibox-heading">
+                			${clusterContent}
+
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <script src="${ctx!}/admin/js/plugins/flot/jquery.flot.js"></script>
+    <script src="${ctx!}/admin/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="${ctx!}/admin/js/plugins/flot/jquery.flot.spline.js"></script>
+    <script src="${ctx!}/admin/js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="${ctx!}/admin/js/plugins/flot/jquery.flot.pie.js"></script>
+    <script src="${ctx!}/admin/js/plugins/flot/jquery.flot.symbol.js"></script>
+    <script src="${ctx!}/admin/js/plugins/flot/curvedLines.js"></script>
+    <script type="text/javascript" src="${ctx!}/admin/index.js"></script>
+</@layout>

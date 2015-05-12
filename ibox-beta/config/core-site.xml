@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<configuration>
+  <property>
+    <name>fs.default.name</name>
+    <value>hdfs://172.31.5.142:9000</value>
+  </property>
+  <property>
+    <name>hadoop.tmp.dir</name>
+    <value>/home/cherry/hadoop/tmp</value>
+  </property>
+  <property>
+    <name>io.sort.mb</name>
+    <value>256</value>
+  </property>
+</configuration>
+

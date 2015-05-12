@@ -1,0 +1,13 @@
+/cn/
+/config.properties
+/core-site.xml
+/del_hosts.sh
+/del_hosts.sh~
+/deploy_datanode.sh
+/ehcache-shiro.xml
+/hdfs-site.xml
+/ibox/
+/log4j.properties
+/mapred-site.xml
+/scp_hosts.sh
+/shiro.ini

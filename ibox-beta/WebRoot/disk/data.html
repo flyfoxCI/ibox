@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="zh_cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>IBOX</title>
+<!-- BEGIN META -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="your,keywords">
+<meta name="description" content="Short explanation about this website">
+<!-- END META -->
+<!-- BEGIN STYLESHEETS -->
+<link type="text/css" rel="stylesheet" href="${ctx!}/assets/css/bootstrap.css">
+<link type="text/css" rel="stylesheet" href="${ctx!}/assets/css/font-awesome.min.css">
+<link type="text/css" rel="stylesheet" href="${ctx!}/assets/css/materialadmin.css">
+<style type="text/css">
+.file-list{
+padding-left: 20px;over-flow-y:scroll;margin-left:10px;}
+#toolbar{
+padding-top:15px;}
+#toolbar i{
+color:blue;
+padding-left:10px;
+}
+#toolbar i:hover{
+cursor:pointer;
+}
+
+</style>
+</head>
+<section>
+<div class="card-body style-default-bright file-list">
+							<ul class="list ui-sortable" data-sortable="true">
+							<li class="divider-full-bleed"></li>
+							 <#list filePage.getList()?sort_by("upload_time")?reverse as file>
+								<li></li>
+								<li class="tile ui-sortable-handle">
+									<div class="checkbox checkbox-styled tile-text">
+										   <div class="col-xs-7">
+										   <label>
+											<input type="checkbox" name="subBox" id="subBox" value="${file.id}">
+											<input type="hidden" name="fileType" id="fileType" value="${file.type}">
+											
+											<span >
+												<#if file.category??><#if file.category==4><img alt="" src="${ctx!}/assets/images/icon/file.png" width="30px" height="30px"/><#else><img alt="" src="${ctx!}/assets/images/icon/${file.type}.png" width="30px" height="30px"/></#if><#else><img alt="" src="${ctx!}/assets/images/icon/dir.png" width="30px" height="30px"/></#if>
+												<#if file.type=="dir"><a href='#' onclick='listDir(this)'>${file.name}</a><#else>${file.name}</#if>
+												
+											</span>
+											<input type="hidden" value="${file.name}" id='fileName'/>
+											</label>
+											</div>
+											<div class='col-xs-2' id='toolbar'><span><i class='fa fa-edit fa-lg iconEdit' onclick='editFile(this)'></i></span><span><i class='fa fa-arrows-alt fa-lg iconMove' onclick='moveSingle(this)'></i></span><span><i class='fa fa-trash-o fa-lg iconTrash' onclick='deleteSingle(this)'></i></span></div>
+											<div class="col-xs-1"><span style=""><#if file.size??>${file.size}b<#else>-</#if></span></div>
+											<div class="col-xs-2"><span><#if file.upload_time??>${file.upload_time}</#if></span></div>
+										
+									</div>
+									
+								</li>
+								<li></li>
+								</#list>
+						
+							</ul>
+							</div>
+							</section>
+							<script type="text/javascript">
+							</script>
+							<script src="${ctx!}/assets/js/jquery/jquery-2.1.1.min.js"></script>
+							<script src="${ctx!}/assets/js/bootstrap/bootstrap.min.js"></script>
+							<script type="text/javascript" src="${ctx!}/assets/js/layer/layer.js"></script>
+							<script type="text/javascript" src="${ctx!}/disk/data.js"></script>
+							
+							</html>
+		

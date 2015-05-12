@@ -1,0 +1,486 @@
+
+2015-05-12 01:18:35
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.Groups.getUserToGroupsMappingService()]:  Creating new Groups object
+
+2015-05-12 01:18:35
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.Groups.<init>()]: Group mapping impl=org.apache.hadoop.security.ShellBasedUnixGroupsMapping; cacheTimeout=300000
+
+2015-05-12 01:18:35
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.UserGroupInformation$HadoopLoginModule.login()]: hadoop login
+
+2015-05-12 01:18:35
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.UserGroupInformation$HadoopLoginModule.commit()]: hadoop login commit
+
+2015-05-12 01:18:35
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.UserGroupInformation$HadoopLoginModule.commit()]: using local user:UnixPrincipal: cherry
+
+2015-05-12 01:18:35
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.UserGroupInformation.getLoginUser()]: UGI loginUser:cherry
+
+2015-05-12 01:18:35
+[DEBUG]-[Thread: main]-[org.apache.hadoop.fs.FileSystem.createFileSystem()]: Creating filesystem for hdfs://172.31.5.142:9000
+
+2015-05-12 01:18:36
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.Client$Connection.<init>()]: The ping interval is60000ms.
+
+2015-05-12 01:18:36
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.Client$Connection.<init>()]: Use SIMPLE authentication for protocol ClientProtocol
+
+2015-05-12 01:18:36
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.Client$Connection.setupIOstreams()]: Connecting to master/172.31.5.142:9000
+
+2015-05-12 01:18:36
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.Client$Connection.sendParam()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry sending #0
+
+2015-05-12 01:18:36
+[DEBUG]-[Thread: IPC Client (47) connection to master/172.31.5.142:9000 from cherry]-[org.apache.hadoop.ipc.Client$Connection.run()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry: starting, having connections 1
+
+2015-05-12 01:18:36
+[DEBUG]-[Thread: IPC Client (47) connection to master/172.31.5.142:9000 from cherry]-[org.apache.hadoop.ipc.Client$Connection.receiveResponse()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry got value #0
+
+2015-05-12 01:18:36
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.RPC$Invoker.invoke()]: Call: getProtocolVersion 151
+
+2015-05-12 01:18:36
+[DEBUG]-[Thread: main]-[org.apache.hadoop.io.retry.RetryUtils.getDefaultRetryPolicy()]: multipleLinearRandomRetry = null
+
+2015-05-12 01:18:36
+[DEBUG]-[Thread: main]-[org.apache.hadoop.hdfs.DFSClient.<init>()]: Short circuit read is false
+
+2015-05-12 01:18:36
+[DEBUG]-[Thread: main]-[org.apache.hadoop.hdfs.DFSClient.<init>()]: Connect to datanode via hostname is false
+
+2015-05-12 01:18:36
+[DEBUG]-[Thread: Thread-0]-[org.apache.hadoop.fs.FileSystem.closeAll()]: Starting clear of FileSystem cache with 1 elements.
+
+2015-05-12 01:18:36
+[DEBUG]-[Thread: Thread-0]-[org.apache.hadoop.ipc.Client.stop()]: Stopping client
+
+2015-05-12 01:18:36
+[DEBUG]-[Thread: IPC Client (47) connection to master/172.31.5.142:9000 from cherry]-[org.apache.hadoop.ipc.Client$Connection.close()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry: closed
+
+2015-05-12 01:18:36
+[DEBUG]-[Thread: IPC Client (47) connection to master/172.31.5.142:9000 from cherry]-[org.apache.hadoop.ipc.Client$Connection.run()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry: stopped, remaining connections 0
+
+2015-05-12 01:18:36
+[DEBUG]-[Thread: Thread-0]-[org.apache.hadoop.fs.FileSystem.close()]: Removing filesystem for hdfs://172.31.5.142:9000
+
+2015-05-12 01:18:36
+[DEBUG]-[Thread: Thread-0]-[org.apache.hadoop.fs.FileSystem.closeAll()]: Done clearing cache
+
+2015-05-12 01:20:24
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.Groups.getUserToGroupsMappingService()]:  Creating new Groups object
+
+2015-05-12 01:20:24
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.Groups.<init>()]: Group mapping impl=org.apache.hadoop.security.ShellBasedUnixGroupsMapping; cacheTimeout=300000
+
+2015-05-12 01:20:24
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.UserGroupInformation$HadoopLoginModule.login()]: hadoop login
+
+2015-05-12 01:20:24
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.UserGroupInformation$HadoopLoginModule.commit()]: hadoop login commit
+
+2015-05-12 01:20:25
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.UserGroupInformation$HadoopLoginModule.commit()]: using local user:UnixPrincipal: cherry
+
+2015-05-12 01:20:25
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.UserGroupInformation.getLoginUser()]: UGI loginUser:cherry
+
+2015-05-12 01:20:25
+[DEBUG]-[Thread: main]-[org.apache.hadoop.fs.FileSystem.createFileSystem()]: Creating filesystem for hdfs://172.31.5.142:9000
+
+2015-05-12 01:20:25
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.Client$Connection.<init>()]: The ping interval is60000ms.
+
+2015-05-12 01:20:25
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.Client$Connection.<init>()]: Use SIMPLE authentication for protocol ClientProtocol
+
+2015-05-12 01:20:25
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.Client$Connection.setupIOstreams()]: Connecting to master/172.31.5.142:9000
+
+2015-05-12 01:20:25
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.Client$Connection.sendParam()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry sending #0
+
+2015-05-12 01:20:25
+[DEBUG]-[Thread: IPC Client (47) connection to master/172.31.5.142:9000 from cherry]-[org.apache.hadoop.ipc.Client$Connection.run()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry: starting, having connections 1
+
+2015-05-12 01:20:25
+[DEBUG]-[Thread: IPC Client (47) connection to master/172.31.5.142:9000 from cherry]-[org.apache.hadoop.ipc.Client$Connection.receiveResponse()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry got value #0
+
+2015-05-12 01:20:26
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.RPC$Invoker.invoke()]: Call: getProtocolVersion 332
+
+2015-05-12 01:20:26
+[DEBUG]-[Thread: main]-[org.apache.hadoop.io.retry.RetryUtils.getDefaultRetryPolicy()]: multipleLinearRandomRetry = null
+
+2015-05-12 01:20:26
+[DEBUG]-[Thread: main]-[org.apache.hadoop.hdfs.DFSClient.<init>()]: Short circuit read is false
+
+2015-05-12 01:20:26
+[DEBUG]-[Thread: main]-[org.apache.hadoop.hdfs.DFSClient.<init>()]: Connect to datanode via hostname is false
+
+2015-05-12 01:20:26
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.Client$Connection.sendParam()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry sending #1
+
+2015-05-12 01:20:26
+[DEBUG]-[Thread: IPC Client (47) connection to master/172.31.5.142:9000 from cherry]-[org.apache.hadoop.ipc.Client$Connection.receiveResponse()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry got value #1
+
+2015-05-12 01:20:26
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.RPC$Invoker.invoke()]: Call: getFileInfo 18
+
+2015-05-12 01:20:26
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.Client$Connection.sendParam()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry sending #2
+
+2015-05-12 01:20:26
+[DEBUG]-[Thread: IPC Client (47) connection to master/172.31.5.142:9000 from cherry]-[org.apache.hadoop.ipc.Client$Connection.receiveResponse()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry got value #2
+
+2015-05-12 01:20:26
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.RPC$Invoker.invoke()]: Call: delete 46
+
+2015-05-12 01:20:26
+[DEBUG]-[Thread: Thread-0]-[org.apache.hadoop.fs.FileSystem.closeAll()]: Starting clear of FileSystem cache with 1 elements.
+
+2015-05-12 01:20:26
+[DEBUG]-[Thread: Thread-0]-[org.apache.hadoop.ipc.Client.stop()]: Stopping client
+
+2015-05-12 01:20:26
+[DEBUG]-[Thread: IPC Client (47) connection to master/172.31.5.142:9000 from cherry]-[org.apache.hadoop.ipc.Client$Connection.close()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry: closed
+
+2015-05-12 01:20:26
+[DEBUG]-[Thread: IPC Client (47) connection to master/172.31.5.142:9000 from cherry]-[org.apache.hadoop.ipc.Client$Connection.run()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry: stopped, remaining connections 0
+
+2015-05-12 01:20:26
+[DEBUG]-[Thread: Thread-0]-[org.apache.hadoop.fs.FileSystem.close()]: Removing filesystem for hdfs://172.31.5.142:9000
+
+2015-05-12 01:20:26
+[DEBUG]-[Thread: Thread-0]-[org.apache.hadoop.fs.FileSystem.closeAll()]: Done clearing cache
+
+2015-05-12 01:20:57
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.Groups.getUserToGroupsMappingService()]:  Creating new Groups object
+
+2015-05-12 01:20:57
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.Groups.<init>()]: Group mapping impl=org.apache.hadoop.security.ShellBasedUnixGroupsMapping; cacheTimeout=300000
+
+2015-05-12 01:20:58
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.UserGroupInformation$HadoopLoginModule.login()]: hadoop login
+
+2015-05-12 01:20:58
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.UserGroupInformation$HadoopLoginModule.commit()]: hadoop login commit
+
+2015-05-12 01:20:58
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.UserGroupInformation$HadoopLoginModule.commit()]: using local user:UnixPrincipal: cherry
+
+2015-05-12 01:20:58
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.UserGroupInformation.getLoginUser()]: UGI loginUser:cherry
+
+2015-05-12 01:20:58
+[DEBUG]-[Thread: main]-[org.apache.hadoop.fs.FileSystem.createFileSystem()]: Creating filesystem for hdfs://172.31.5.142:9000
+
+2015-05-12 01:20:59
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.Client$Connection.<init>()]: The ping interval is60000ms.
+
+2015-05-12 01:20:59
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.Client$Connection.<init>()]: Use SIMPLE authentication for protocol ClientProtocol
+
+2015-05-12 01:20:59
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.Client$Connection.setupIOstreams()]: Connecting to master/172.31.5.142:9000
+
+2015-05-12 01:21:00
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.Client$Connection.sendParam()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry sending #0
+
+2015-05-12 01:21:00
+[DEBUG]-[Thread: IPC Client (47) connection to master/172.31.5.142:9000 from cherry]-[org.apache.hadoop.ipc.Client$Connection.run()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry: starting, having connections 1
+
+2015-05-12 01:21:00
+[DEBUG]-[Thread: IPC Client (47) connection to master/172.31.5.142:9000 from cherry]-[org.apache.hadoop.ipc.Client$Connection.receiveResponse()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry got value #0
+
+2015-05-12 01:21:00
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.RPC$Invoker.invoke()]: Call: getProtocolVersion 556
+
+2015-05-12 01:21:00
+[DEBUG]-[Thread: main]-[org.apache.hadoop.io.retry.RetryUtils.getDefaultRetryPolicy()]: multipleLinearRandomRetry = null
+
+2015-05-12 01:21:00
+[DEBUG]-[Thread: main]-[org.apache.hadoop.hdfs.DFSClient.<init>()]: Short circuit read is false
+
+2015-05-12 01:21:00
+[DEBUG]-[Thread: main]-[org.apache.hadoop.hdfs.DFSClient.<init>()]: Connect to datanode via hostname is false
+
+2015-05-12 01:21:00
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.Client$Connection.sendParam()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry sending #1
+
+2015-05-12 01:21:00
+[DEBUG]-[Thread: IPC Client (47) connection to master/172.31.5.142:9000 from cherry]-[org.apache.hadoop.ipc.Client$Connection.receiveResponse()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry got value #1
+
+2015-05-12 01:21:00
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.RPC$Invoker.invoke()]: Call: getFileInfo 13
+
+2015-05-12 01:21:00
+[DEBUG]-[Thread: Thread-0]-[org.apache.hadoop.fs.FileSystem.closeAll()]: Starting clear of FileSystem cache with 1 elements.
+
+2015-05-12 01:21:00
+[DEBUG]-[Thread: Thread-0]-[org.apache.hadoop.ipc.Client.stop()]: Stopping client
+
+2015-05-12 01:21:00
+[DEBUG]-[Thread: IPC Client (47) connection to master/172.31.5.142:9000 from cherry]-[org.apache.hadoop.ipc.Client$Connection.close()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry: closed
+
+2015-05-12 01:21:00
+[DEBUG]-[Thread: IPC Client (47) connection to master/172.31.5.142:9000 from cherry]-[org.apache.hadoop.ipc.Client$Connection.run()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry: stopped, remaining connections 0
+
+2015-05-12 01:21:00
+[DEBUG]-[Thread: Thread-0]-[org.apache.hadoop.fs.FileSystem.close()]: Removing filesystem for hdfs://172.31.5.142:9000
+
+2015-05-12 01:21:00
+[DEBUG]-[Thread: Thread-0]-[org.apache.hadoop.fs.FileSystem.closeAll()]: Done clearing cache
+
+2015-05-12 01:21:17
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.Groups.getUserToGroupsMappingService()]:  Creating new Groups object
+
+2015-05-12 01:21:17
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.Groups.<init>()]: Group mapping impl=org.apache.hadoop.security.ShellBasedUnixGroupsMapping; cacheTimeout=300000
+
+2015-05-12 01:21:17
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.UserGroupInformation$HadoopLoginModule.login()]: hadoop login
+
+2015-05-12 01:21:17
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.UserGroupInformation$HadoopLoginModule.commit()]: hadoop login commit
+
+2015-05-12 01:21:17
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.UserGroupInformation$HadoopLoginModule.commit()]: using local user:UnixPrincipal: cherry
+
+2015-05-12 01:21:17
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.UserGroupInformation.getLoginUser()]: UGI loginUser:cherry
+
+2015-05-12 01:21:17
+[DEBUG]-[Thread: main]-[org.apache.hadoop.fs.FileSystem.createFileSystem()]: Creating filesystem for hdfs://172.31.5.142:9000
+
+2015-05-12 01:21:18
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.Client$Connection.<init>()]: The ping interval is60000ms.
+
+2015-05-12 01:21:18
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.Client$Connection.<init>()]: Use SIMPLE authentication for protocol ClientProtocol
+
+2015-05-12 01:21:18
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.Client$Connection.setupIOstreams()]: Connecting to master/172.31.5.142:9000
+
+2015-05-12 01:21:18
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.Client$Connection.sendParam()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry sending #0
+
+2015-05-12 01:21:18
+[DEBUG]-[Thread: IPC Client (47) connection to master/172.31.5.142:9000 from cherry]-[org.apache.hadoop.ipc.Client$Connection.run()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry: starting, having connections 1
+
+2015-05-12 01:21:18
+[DEBUG]-[Thread: IPC Client (47) connection to master/172.31.5.142:9000 from cherry]-[org.apache.hadoop.ipc.Client$Connection.receiveResponse()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry got value #0
+
+2015-05-12 01:21:18
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.RPC$Invoker.invoke()]: Call: getProtocolVersion 375
+
+2015-05-12 01:21:18
+[DEBUG]-[Thread: main]-[org.apache.hadoop.io.retry.RetryUtils.getDefaultRetryPolicy()]: multipleLinearRandomRetry = null
+
+2015-05-12 01:21:18
+[DEBUG]-[Thread: main]-[org.apache.hadoop.hdfs.DFSClient.<init>()]: Short circuit read is false
+
+2015-05-12 01:21:18
+[DEBUG]-[Thread: main]-[org.apache.hadoop.hdfs.DFSClient.<init>()]: Connect to datanode via hostname is false
+
+2015-05-12 01:21:18
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.Client$Connection.sendParam()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry sending #1
+
+2015-05-12 01:21:18
+[DEBUG]-[Thread: IPC Client (47) connection to master/172.31.5.142:9000 from cherry]-[org.apache.hadoop.ipc.Client$Connection.receiveResponse()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry got value #1
+
+2015-05-12 01:21:18
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.RPC$Invoker.invoke()]: Call: getFileInfo 21
+
+2015-05-12 01:21:18
+[DEBUG]-[Thread: Thread-0]-[org.apache.hadoop.fs.FileSystem.closeAll()]: Starting clear of FileSystem cache with 1 elements.
+
+2015-05-12 01:21:18
+[DEBUG]-[Thread: Thread-0]-[org.apache.hadoop.ipc.Client.stop()]: Stopping client
+
+2015-05-12 01:21:18
+[DEBUG]-[Thread: IPC Client (47) connection to master/172.31.5.142:9000 from cherry]-[org.apache.hadoop.ipc.Client$Connection.close()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry: closed
+
+2015-05-12 01:21:18
+[DEBUG]-[Thread: IPC Client (47) connection to master/172.31.5.142:9000 from cherry]-[org.apache.hadoop.ipc.Client$Connection.run()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry: stopped, remaining connections 0
+
+2015-05-12 01:21:18
+[DEBUG]-[Thread: Thread-0]-[org.apache.hadoop.fs.FileSystem.close()]: Removing filesystem for hdfs://172.31.5.142:9000
+
+2015-05-12 01:21:18
+[DEBUG]-[Thread: Thread-0]-[org.apache.hadoop.fs.FileSystem.closeAll()]: Done clearing cache
+
+2015-05-12 01:21:47
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.Groups.getUserToGroupsMappingService()]:  Creating new Groups object
+
+2015-05-12 01:21:47
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.Groups.<init>()]: Group mapping impl=org.apache.hadoop.security.ShellBasedUnixGroupsMapping; cacheTimeout=300000
+
+2015-05-12 01:21:48
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.UserGroupInformation$HadoopLoginModule.login()]: hadoop login
+
+2015-05-12 01:21:48
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.UserGroupInformation$HadoopLoginModule.commit()]: hadoop login commit
+
+2015-05-12 01:21:48
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.UserGroupInformation$HadoopLoginModule.commit()]: using local user:UnixPrincipal: cherry
+
+2015-05-12 01:21:48
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.UserGroupInformation.getLoginUser()]: UGI loginUser:cherry
+
+2015-05-12 01:21:48
+[DEBUG]-[Thread: main]-[org.apache.hadoop.fs.FileSystem.createFileSystem()]: Creating filesystem for hdfs://172.31.5.142:9000
+
+2015-05-12 01:21:48
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.Client$Connection.<init>()]: The ping interval is60000ms.
+
+2015-05-12 01:21:48
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.Client$Connection.<init>()]: Use SIMPLE authentication for protocol ClientProtocol
+
+2015-05-12 01:21:48
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.Client$Connection.setupIOstreams()]: Connecting to master/172.31.5.142:9000
+
+2015-05-12 01:21:49
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.Client$Connection.sendParam()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry sending #0
+
+2015-05-12 01:21:49
+[DEBUG]-[Thread: IPC Client (47) connection to master/172.31.5.142:9000 from cherry]-[org.apache.hadoop.ipc.Client$Connection.run()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry: starting, having connections 1
+
+2015-05-12 01:21:49
+[DEBUG]-[Thread: IPC Client (47) connection to master/172.31.5.142:9000 from cherry]-[org.apache.hadoop.ipc.Client$Connection.receiveResponse()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry got value #0
+
+2015-05-12 01:21:49
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.RPC$Invoker.invoke()]: Call: getProtocolVersion 556
+
+2015-05-12 01:21:49
+[DEBUG]-[Thread: main]-[org.apache.hadoop.io.retry.RetryUtils.getDefaultRetryPolicy()]: multipleLinearRandomRetry = null
+
+2015-05-12 01:21:49
+[DEBUG]-[Thread: main]-[org.apache.hadoop.hdfs.DFSClient.<init>()]: Short circuit read is false
+
+2015-05-12 01:21:49
+[DEBUG]-[Thread: main]-[org.apache.hadoop.hdfs.DFSClient.<init>()]: Connect to datanode via hostname is false
+
+2015-05-12 01:21:49
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.Client$Connection.sendParam()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry sending #1
+
+2015-05-12 01:21:49
+[DEBUG]-[Thread: IPC Client (47) connection to master/172.31.5.142:9000 from cherry]-[org.apache.hadoop.ipc.Client$Connection.receiveResponse()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry got value #1
+
+2015-05-12 01:21:49
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.RPC$Invoker.invoke()]: Call: getFileInfo 17
+
+2015-05-12 01:21:49
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.Client$Connection.sendParam()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry sending #2
+
+2015-05-12 01:21:49
+[DEBUG]-[Thread: IPC Client (47) connection to master/172.31.5.142:9000 from cherry]-[org.apache.hadoop.ipc.Client$Connection.receiveResponse()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry got value #2
+
+2015-05-12 01:21:49
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.RPC$Invoker.invoke()]: Call: delete 40
+
+2015-05-12 01:21:49
+[DEBUG]-[Thread: Thread-0]-[org.apache.hadoop.fs.FileSystem.closeAll()]: Starting clear of FileSystem cache with 1 elements.
+
+2015-05-12 01:21:49
+[DEBUG]-[Thread: Thread-0]-[org.apache.hadoop.ipc.Client.stop()]: Stopping client
+
+2015-05-12 01:21:49
+[DEBUG]-[Thread: IPC Client (47) connection to master/172.31.5.142:9000 from cherry]-[org.apache.hadoop.ipc.Client$Connection.close()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry: closed
+
+2015-05-12 01:21:49
+[DEBUG]-[Thread: IPC Client (47) connection to master/172.31.5.142:9000 from cherry]-[org.apache.hadoop.ipc.Client$Connection.run()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry: stopped, remaining connections 0
+
+2015-05-12 01:21:49
+[DEBUG]-[Thread: Thread-0]-[org.apache.hadoop.fs.FileSystem.close()]: Removing filesystem for hdfs://172.31.5.142:9000
+
+2015-05-12 01:21:49
+[DEBUG]-[Thread: Thread-0]-[org.apache.hadoop.fs.FileSystem.closeAll()]: Done clearing cache
+
+2015-05-12 09:23:37
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.Groups.getUserToGroupsMappingService()]:  Creating new Groups object
+
+2015-05-12 09:23:37
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.Groups.<init>()]: Group mapping impl=org.apache.hadoop.security.ShellBasedUnixGroupsMapping; cacheTimeout=300000
+
+2015-05-12 09:23:38
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.UserGroupInformation$HadoopLoginModule.login()]: hadoop login
+
+2015-05-12 09:23:38
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.UserGroupInformation$HadoopLoginModule.commit()]: hadoop login commit
+
+2015-05-12 09:23:38
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.UserGroupInformation$HadoopLoginModule.commit()]: using local user:UnixPrincipal: cherry
+
+2015-05-12 09:23:38
+[DEBUG]-[Thread: main]-[org.apache.hadoop.security.UserGroupInformation.getLoginUser()]: UGI loginUser:cherry
+
+2015-05-12 09:23:38
+[DEBUG]-[Thread: main]-[org.apache.hadoop.fs.FileSystem.createFileSystem()]: Creating filesystem for hdfs://172.31.5.142:9000
+
+2015-05-12 09:23:39
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.Client$Connection.<init>()]: The ping interval is60000ms.
+
+2015-05-12 09:23:39
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.Client$Connection.<init>()]: Use SIMPLE authentication for protocol ClientProtocol
+
+2015-05-12 09:23:39
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.Client$Connection.setupIOstreams()]: Connecting to master/172.31.5.142:9000
+
+2015-05-12 09:23:40
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.Client$Connection.sendParam()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry sending #0
+
+2015-05-12 09:23:40
+[DEBUG]-[Thread: IPC Client (47) connection to master/172.31.5.142:9000 from cherry]-[org.apache.hadoop.ipc.Client$Connection.run()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry: starting, having connections 1
+
+2015-05-12 09:23:40
+[DEBUG]-[Thread: IPC Client (47) connection to master/172.31.5.142:9000 from cherry]-[org.apache.hadoop.ipc.Client$Connection.receiveResponse()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry got value #0
+
+2015-05-12 09:23:40
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.RPC$Invoker.invoke()]: Call: getProtocolVersion 511
+
+2015-05-12 09:23:40
+[DEBUG]-[Thread: main]-[org.apache.hadoop.io.retry.RetryUtils.getDefaultRetryPolicy()]: multipleLinearRandomRetry = null
+
+2015-05-12 09:23:40
+[DEBUG]-[Thread: main]-[org.apache.hadoop.hdfs.DFSClient.<init>()]: Short circuit read is false
+
+2015-05-12 09:23:40
+[DEBUG]-[Thread: main]-[org.apache.hadoop.hdfs.DFSClient.<init>()]: Connect to datanode via hostname is false
+
+2015-05-12 09:23:40
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.Client$Connection.sendParam()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry sending #1
+
+2015-05-12 09:23:40
+[DEBUG]-[Thread: IPC Client (47) connection to master/172.31.5.142:9000 from cherry]-[org.apache.hadoop.ipc.Client$Connection.receiveResponse()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry got value #1
+
+2015-05-12 09:23:40
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.RPC$Invoker.invoke()]: Call: getFileInfo 21
+
+2015-05-12 09:23:40
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.Client$Connection.sendParam()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry sending #2
+
+2015-05-12 09:23:40
+[DEBUG]-[Thread: IPC Client (47) connection to master/172.31.5.142:9000 from cherry]-[org.apache.hadoop.ipc.Client$Connection.receiveResponse()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry got value #2
+
+2015-05-12 09:23:40
+[DEBUG]-[Thread: main]-[org.apache.hadoop.ipc.RPC$Invoker.invoke()]: Call: delete 73
+
+2015-05-12 09:23:40
+[DEBUG]-[Thread: Thread-0]-[org.apache.hadoop.fs.FileSystem.closeAll()]: Starting clear of FileSystem cache with 1 elements.
+
+2015-05-12 09:23:40
+[DEBUG]-[Thread: Thread-0]-[org.apache.hadoop.ipc.Client.stop()]: Stopping client
+
+2015-05-12 09:23:40
+[DEBUG]-[Thread: IPC Client (47) connection to master/172.31.5.142:9000 from cherry]-[org.apache.hadoop.ipc.Client$Connection.close()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry: closed
+
+2015-05-12 09:23:40
+[DEBUG]-[Thread: IPC Client (47) connection to master/172.31.5.142:9000 from cherry]-[org.apache.hadoop.ipc.Client$Connection.run()]: IPC Client (47) connection to master/172.31.5.142:9000 from cherry: stopped, remaining connections 0
+
+2015-05-12 09:23:40
+[DEBUG]-[Thread: Thread-0]-[org.apache.hadoop.fs.FileSystem.close()]: Removing filesystem for hdfs://172.31.5.142:9000
+
+2015-05-12 09:23:40
+[DEBUG]-[Thread: Thread-0]-[org.apache.hadoop.fs.FileSystem.closeAll()]: Done clearing cache

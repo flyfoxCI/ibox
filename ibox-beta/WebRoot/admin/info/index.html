@@ -1,0 +1,84 @@
+<#include "/admin/layout.html"> 
+<@layout>
+	<link href="${ctx!}/admin/css/plugins/jQueryUI/jquery-ui-1.10.4.custom.min.css" rel="stylesheet">
+    <!-- Data Tables -->
+    <link href="${ctx!}/admin/css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="${ctx!}/admin/css/style.css" rel="stylesheet">
+            <div class="row wrapper border-bottom white-bg page-heading">
+	<div class="col-lg-10">
+		<h2>个人资料</h2>
+		<ol class="breadcrumb">
+			<li><a href="${ctx!}/admin/index">主页</a></li>
+			<li><strong>个人资料</strong></li>
+		</ol>
+	</div>
+	<div class="col-lg-2"></div>
+</div>
+			<div class="ibox-content">
+	       <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>修改个人资料</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                         		<form action="" id="addForm">
+                         		<div class="errMsg hidden" style="color:red;font-szie:20px;"></div>
+                               <div class="form-group row">
+                                        <label class="col-sm-2 control-label">用户名</label>
+
+                                        <div class="col-sm-4">
+                                            <input type="text" class="form-control" id="username">
+                                        </div>
+                                    </div>
+                                      <div class="hr-line-dashed"></div>
+                                  <div class="form-group row">
+                                        <label class="col-sm-2 control-label">邮箱</label>
+
+                                        <div class="col-sm-4">
+                                            <input type="email" class="form-control" id="email">
+                                        </div>
+                                    </div>
+                                       <div class="hr-line-dashed"></div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 control-label">密码</label>
+
+                                        <div class="col-sm-4">
+                                            <input type="password" class="form-control" id="password">
+                                        </div>
+                                    </div>
+                                       <div class="hr-line-dashed"></div>
+                                     <div class="form-group row">
+                                        <label class="col-sm-2 control-label">确认密码</label>
+                                        <div class="col-sm-4">
+                                            <input type="password" class="form-control" id="confirmPassword">
+                                        </div>  
+                                    </div>
+                                     <div class="form-group ">
+                                        <div class="col-sm-4 col-sm-offset-2">
+                                            <button class="btn btn-primary"  id="save">保存内容</button>
+                                            <button class="btn btn-white">取消</button>
+                                        </div>
+                                    </div>
+                                     
+                                   </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+               
+               <script type="text/javascript">
+				var rootPath="${ctx!}";
+				</script>
+<script type="text/javascript" src="${ctx!}/admin/info/index.js"></script>
+
+</@layout>

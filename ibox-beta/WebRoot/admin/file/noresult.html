@@ -1,0 +1,168 @@
+<#include "/admin/layout.html"> 
+<@layout>
+<link
+	href="${ctx!}/admin/css/plugins/jQueryUI/jquery-ui-1.10.4.custom.min.css"
+	rel="stylesheet">
+<link href="${ctx!}/admin/css/style.css" rel="stylesheet">
+<style type="text/css" media="screen">
+        input[type=checkbox],input[type=radio]{
+        -webkit-appearance: none;
+        appearance: none;
+        width: 14px;
+        height: 14px;
+        margin: 0;
+        cursor: pointer;
+        vertical-align: bottom;
+        background: #fff;
+        border: 1px solid green;
+        -webkit-border-radius: 1px;
+        -moz-border-radius: 1px;
+        border-radius: 3px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        position: relative;
+		}
+		input[type=checkbox]:active,input[type=radio]:active {
+        border-color: green;
+        background: #ebebeb;
+}       
+        
+input[type=checkbox]:hover {
+        border-color: #c6c6c6;
+        -webkit-box-shadow: inset 0 2px 2px rgba(0,0,0,0.1);
+        -moz-box-shadow: inset 0 2px 2px rgba(0,0,0,0.1);
+        box-shadow: inset 0 2px 2px rgba(0,0,0,0.1);
+}
+
+input[type=checkbox]:checked,input[type=radio]:checked {
+        background: #fff;
+}
+
+input[type=checkbox]:checked::after {
+        content: url(../img/cb.jpg);
+        display: block;
+        position: absolute;
+        top: -5px;
+        right: 0px;
+        left: -5px
+}
+
+input[type=checkbox]:focus {
+        outline: none;
+        border-color: green;
+}
+.table i{font-size:20px;}
+.table span{width:20px;margin-left:10px;}
+i:hover{cursor:pointer;}
+    </style>
+    <script type="text/javascript">
+			var rootPath="${ctx!}";
+			</script>
+<div class="row wrapper border-bottom white-bg page-heading">
+	<div class="col-lg-10">
+		<h2>文件管理</h2>
+		<ol class="breadcrumb">
+			<li><a href="${ctx!}/admin/index">主页</a></li>
+			<li><strong>文件管理</strong></li>
+		</ol>
+	</div>
+</div>
+		<div class="ibox float-e-margins">
+			<div class="ibox-content">
+				    <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                  				<h2>${keywords}搜索结果</h2>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="table_basic.html#">
+                                        <i class="fa fa-wrench"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-user">
+                                        <li><a href="table_basic.html#">选项1</a>
+                                        </li>
+                                        <li><a href="table_basic.html#">选项2</a>
+                                        </li>
+                                    </ul>
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            	<div class="ibox-content">
+                                <div class="row">
+                                    <div class="col-sm-9 m-b-xs">
+                                        <button class="btn btn-primary" data-target="#delModal" data-toggle="modal" data-backdrop="false">删除</button>
+                                  <div class="modal inmodal" id="delModal" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content animated bounceInRight">
+                                            <div class="modal-header">
+                                             <h4 class="modal-title">删除文件</h4>
+                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only"></span>
+                                                </button>
+                                      		</div>
+   
+                                        <div class="modal-body">
+                     
+                                              <div class="form-group">
+                                              	<p>确认删除文件？</p>
+                                              </div> 
+                                              <div class="modal-footer">
+                                            <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+                                            <button type="button" class="btn btn-primary" id="delSubmit">确定</button>
+                                        	</div>
+                                             
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                                    </div>
+                              
+                                    <div class="col-sm-3">
+                                        <div class="input-group">
+                                            <input type="text" placeholder="请输入关键词" class="input-sm form-control" id="keywords"> <span class="input-group-btn">
+                                            <button type="button" class="btn btn-sm btn-primary" id="search"> 搜索</button> </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <tbody id="tbody">
+                                        	<#list filePage.getList() as file>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" class="i-checks" name="item" value="${file.id}">
+                                                </td>
+                                                <td>${file.name}</td>
+                                                <td class="icon-tool"><span class="download"><i class="fa fa-cloud-download"></i></span>
+                                           
+                                                	<span class="del"><i class="fa fa-trash"></i></span>
+                                                </td>
+                                                <td>${file.size/1024/1024}Mb</td>
+                                                <td>${file.upload_time}</td>
+                                                <input type="hidden" value="${file.id}" id="id"/>
+                                                <input type="hidden" value="${file.email}" id="email"/>
+                                                <input type="hidden" value="${file.type}" id="type"/>
+                                                 </tr>
+                                            </#list>
+                                            
+                                        </tbody>
+                 
+                                    </table>
+                                    
+									
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+<script src="${ctx!}/admin/file/index.js"></script> 
+</@layout>

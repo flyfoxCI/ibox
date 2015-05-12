@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="${ctx!}/assets/js/jquery-2.1.1.min.js"></script>
+	<!--Stylesheets-->
+	 <script src="${ctx!}/assets/avalon/avalon.js"></script>
+             <script>
+        var child = [];
+        var zNodes =[
+            { dirId:"${session['file_id']}", pid:1, name:"我的文件", isParent:true, async: true}
+           
+        ];
+        	var toId;
+            function g(id) {
+                return document.getElementById(id);
+            }
+            require(["oniui/tree/avalon.tree.async"], function() {
+                avalon.define("test", function(vm) {
+                    vm.tree = {
+                        children: zNodes,
+                        async: {
+                            enable: true,
+                            autoParam: ["dirId"],
+                            url:"${ctx!}/disk/listDir",
+                            contentType: "application/x-www-form-urlencoded",
+                            dataType: "json",
+                            type: "post",
+                            
+                        },
+                        data: {
+                            simpleData: {
+                                enable: true,
+                                pIdKey: "pid",
+                                async: "async"
+                            },
+                            keep: {
+                                leaf: false,
+                                parent: true
+                            },
+                            key: {
+                                async: "async"
+                            }
+                        },
+                       view: {
+                            editNameSelectAll: true,
+                            showLine: function(leaf) {
+                                return true;
+                                return leaf.level > 1 || 1;
+                            }
+                        },
+                        callback: {
+                            // 擴展實現異步
+                            onExpand: function(arg) {
+                            },
+                            beforeAsync: function(arg) {
+                                console.log("now loading");
+                                var leaf = arg.leaf;
+                                if(!leaf.async) {
+                                    arg.preventDefault();
+                                }
+                            },onClick:function(arg){
+                                	$('#toPath').val(arg.leaf.dirId);
+                                	
+                                }
+                        }
+                    };
+                   
+                    vm.$skipArray = ["tree"];
+                });
+                avalon.scan();
+            });
+          
+        </script>
+    
+	<!--[if IE]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div>
+        <!-- filer 3 -->
+        <input type="hidden" id="toPath" value=""/>
+        <div ms-controller="test">
+        <div ms-widget="tree"></div>
+        <div ms-widget="tree,tree2,$treeOpt"></div>
+		</div>
+    </body>
+</html>

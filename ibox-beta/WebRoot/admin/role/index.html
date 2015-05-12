@@ -1,0 +1,247 @@
+<#include "/admin/layout.html"> <@layout>
+<link
+	href="${ctx!}/admin/css/plugins/jQueryUI/jquery-ui-1.10.4.custom.min.css"
+	rel="stylesheet">
+<!-- Data Tables -->
+<link
+	href="${ctx!}/admin/css/plugins/dataTables/dataTables.bootstrap.css"
+	rel="stylesheet">
+<link href="${ctx!}/admin/css/style.css" rel="stylesheet">
+ <link rel="stylesheet" href="${ctx!}/admin/css/plugins/zTreeStyle/metro.css">
+<div class="row wrapper border-bottom white-bg page-heading">
+	<div class="col-lg-10">
+		<h2>系统设置</h2>
+		<ol class="breadcrumb">
+			<li><a href="${ctx!}/admin/index">主页</a></li>
+			<li><a href="${ctx!}/admin/set">系统设置</a></li>
+			<li><strong>角色设置</strong></li>
+		</ol>
+	</div>
+	<div class="col-lg-2"></div>
+</div>
+<div class="row">
+	<div class="col-lg-12">
+		<div class="ibox float-e-margins">
+			<div class="ibox-title">
+
+				<div class="ibox-tools">
+					<a class="collapse-link"> <i class="fa fa-chevron-up"></i>
+					</a> <a class="dropdown-toggle" data-toggle="dropdown"
+						href="table_data_tables.html#"> <i class="fa fa-wrench"></i>
+					</a>
+					<ul class="dropdown-menu dropdown-user">
+					 <#list session["setRescList"] as resc>
+					 <li><a href=${ctx!}${resc.url}>${resc.name}</a></li>
+					 </#list>
+					</ul>
+					<a class="close-link"> <i class="fa fa-times"></i>
+					</a>
+				</div>
+			</div>
+			<div class="ibox-content">
+				<div class="">
+					<button class="btn btn-primary " data-toggle="modal"
+						data-target="#addRoleModal" data-backdrop="false">添加角色</button>
+					<div class="modal inmodal" id="addRoleModal" tabindex="-1"
+						role="dialog" aria-hidden="true"  >
+						<div class="modal-dialog">
+							<div class="modal-content animated bounceInRight">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal">
+										<span aria-hidden="true">&times;</span><span class="sr-only">关闭</span>
+									</button>
+									<i class="fa fa-laptop modal-icon"></i>
+									<h4 class="modal-title">添加角色</h4>
+
+								</div>
+								<div class="modal-body" ms-controller="addUserCtrl">
+									<form action="" id="addForm">
+										<div class="form-group">
+											<p id="errMsg"></p>
+											<label>角色名</label> <input type="text" placeholder="请输入角色名"
+												class="form-control" id="role_name" name="rolename">
+										</div>
+										<div class="form-group">
+											
+											<label>排序</label> <input type="text" placeholder="请输入排序"
+												class="form-control" id="role_sort" name="rolesort">
+										</div>
+										<div class="form-group">
+											<label>角色类别</label>
+											<div class="row " style="margin-left:5px;">
+											<input type="radio" value="0"
+												id="role_type" name="role_type"  ><label>前台</label> 
+												<input type="radio"  value="1"
+												id="role_type" name="role_type"  ><label>后台</label> 
+											</div> 
+										</div>
+										   <div class="form-group">
+										   <label>是否激活</label>
+										   <div class="row " style="margin-left:5px;">
+											 <input type="radio"  value="1"
+												id="is_active" name="is_active"><label>激活</label> 
+												<input type="radio" ms-duplex-check="is_active" value="0"
+												id="is_active" name="is_active"  ><label>不激活</label> 
+											</div>
+										   </div>
+										   <!-- ztree授权 -->
+										   <div class="form-group">
+										      <label>请选择权限</label>
+										   <ul id="tree1" class="ztree row" overflow:auto; "></ul>
+										   </div>
+										   <input id="ids" type="hidden">
+										<div class="modal-footer">
+											<button type="button" class="btn btn-white"
+												data-dismiss="modal">关闭</button>
+											<button type="button" class="btn btn-primary"
+												ms-click="submit" id="addRoleSave">保存</button>
+										</div>
+									</form>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<!-- 修改role资料 -->
+				<div class="modal inmodal" id="editRoleModal" tabindex="-1"
+						role="dialog" aria-hidden="true"  >
+						<div class="modal-dialog">
+							<div class="modal-content animated bounceInRight">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal">
+										<span aria-hidden="true">&times;</span><span class="sr-only">关闭</span>
+									</button>
+									<i class="fa fa-laptop modal-icon"></i>
+									<h4 class="modal-title">修改角色</h4>
+
+								</div>
+								<div class="modal-body" ms-controller="addUserCtrl">
+									<form action="" id="addForm">
+										<div class="form-group">
+											<p id="editErrMsg"></p>
+											<label>角色名</label> <input type="text" placeholder="请输入角色名"
+												class="form-control" id="edit_role_name" name="rolename">
+										</div>
+										<div class="form-group">
+											
+											<label>排序</label> <input type="text" placeholder="请输入排序"
+												class="form-control" id="edit_role_sort" name="rolesort">
+										</div>
+										<div class="form-group">
+											<label>角色类别</label>
+											<div class="row " style="margin-left:5px;">
+											<input type="radio" value="0"
+												id="role_type" name="edit_role_type"  ><label>前台</label> 
+												<input type="radio"  value="1"
+												id="role_type" name="edit_role_type"  ><label>后台</label> 
+											</div> 
+										</div>
+										   <div class="form-group">
+										   <label>是否激活</label>
+										   <div class="row " style="margin-left:5px;">
+											 <input type="radio"  value="1"
+												id="is_active" name="edit_is_active"><label>激活</label> 
+												<input type="radio" ms-duplex-check="is_active" value="0"
+												id="is_active" name="edit_is_active"  ><label>不激活</label> 
+											</div>
+										   </div>
+										   <!-- ztree授权 -->
+										   <div class="form-group">
+										      <label>请选择权限</label>
+										   <ul id="tree2" class="ztree row" overflow:auto; "></ul>
+										   </div>
+										   <input id="edit_ids" type="hidden">
+										<div class="modal-footer">
+											<button type="button" class="btn btn-white"
+												data-dismiss="modal">关闭</button>
+											<button type="button" class="btn btn-primary"
+												ms-click="submit" id="editRoleSubmit">保存</button>
+										</div>
+									</form>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<!-- 删除dialog -->
+					<div class="modal inmodal" id="delRoleModal" tabindex="-1"
+						role="dialog" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content animated bounceInRight">
+							<div class="form-group">
+												<p id="delMsg" style="color:red;"></p>
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal">
+										<span aria-hidden="true">&times;</span><span class="sr-only">关闭</span>
+									</button>
+									<i class="fa fa-laptop modal-icon"></i>
+									<h4 class="modal-title">删除用户</h4>
+								</div>
+								<div class="modal-body" >
+										<div class="form-group">
+											<p>确认删除该用户</p>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-white"
+												data-dismiss="modal">关闭</button>
+											<button type="button" class="btn btn-primary"
+												ms-click="submit" id="delRoleSubmit">确定</button>
+										</div>
+									</form>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<table class="table table-striped table-bordered table-hover "
+					id="editable">
+					<tbody>
+					<thead>
+						<tr>
+						     <th>id</th>
+							<th>角色名称</th>
+							<th>角色类别</th>
+							<th>创建时间</th>
+							<th>是否启用</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+
+
+					</tbody>
+				</table>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- Data Tables -->
+<script type="text/javascript">
+    var rootPath="${ctx!}";
+    var data;
+   	var oTable;
+    $(document).ready(function () {
+      oTable=$('#editable').dataTable({
+        	 "bFilter": false,//去掉搜索框
+             "bAutoWidth": true, //自适应宽度
+             "sPaginationType" : "full_numbers",
+             //"sAjaxDataProp" : "aData",
+             "bDestroy" : true,
+             "bProcessing" : true,
+             "sAjaxSource" : "${ctx!}/admin/role/getRoleList",
+             "bServerSide" : true,
+        })
+    });
+    
+	</script>
+<script src="${ctx!}/assets/avalon/avalon.min.js"></script>
+ <script src="${ctx!}/admin/js/plugins/ztree/jquery.ztree.all-3.5.min.js"></script>
+<script type="text/javascript" src="${ctx!}/admin/role/ztree.js"></script>
+<script src="${ctx!}/admin/role/index.js"></script> 
+
+</@layout>
